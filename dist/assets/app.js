@@ -1,4 +1,3 @@
-/* Front-end demonstrations only: no network requests or saved form values. */
 'use strict';
 
 document.querySelectorAll('form[data-mode]').forEach((form) => {
@@ -15,7 +14,7 @@ document.querySelectorAll('form[data-mode]').forEach((form) => {
     status.hidden = false;
   }
 
-  // Custom errors must be cleared before checking again, otherwise they stick.
+
   function updateConstraints() {
     fields.forEach((field) => {
       field.setCustomValidity('');
@@ -74,7 +73,7 @@ document.querySelectorAll('form[data-mode]').forEach((form) => {
         return;
       }
     }
-    // Native forms reach this handler only after the browser's checks pass.
+    
     showStatus(form.dataset.success || 'Form completed. This is a front-end demonstration.', 'success');
   });
 
