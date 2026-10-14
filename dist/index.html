@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HTML forms and Bootstrap validation. Assignment 4.">
+  <title>Task 4: Registration Form | Assignment 4</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body data-task="4">
+  <a class="skip-link" href="#main">Skip to form</a>
+  <div class="container page-container">
+    <header class="site-header">
+      <nav class="task-nav" aria-label="Assignment tasks">
+        <a href="task0.html">Task 0</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="index.html" class="active" aria-current="page">Task 4</a>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 id="task-title">Task 4: Registration Form</h1>
+      <p class="required-note">Fields marked * are required. Hobbies are optional.</p>
+<section class="form-section" aria-labelledby="task-title">
+        <!-- HTML5 constraints are checked by app.js and shown as Bootstrap feedback. -->
+<form id="registration-form" class="row g-3" data-mode="custom" novalidate data-success="Registration details are valid.">
+            <div class="col-md-6">
+<label class="form-label" for="first-name">First name <span aria-hidden="true">*</span></label><input class="form-control" id="first-name" name="firstName" type="text" placeholder="e.g. Zhadiger" autocomplete="given-name" required maxlength="80" data-trim data-label="First name" aria-describedby="first-name-invalid first-name-valid"><div class="invalid-feedback" id="first-name-invalid">First name is required.</div>
+<div class="valid-feedback" id="first-name-valid">Looks good!</div>
+</div>
+            <div class="col-md-6">
+<label class="form-label" for="last-name">Last name <span aria-hidden="true">*</span></label><input class="form-control" id="last-name" name="lastName" type="text" placeholder="e.g. Saken" autocomplete="family-name" required maxlength="80" data-trim data-label="Last name" aria-describedby="last-name-invalid last-name-valid"><div class="invalid-feedback" id="last-name-invalid">Last name is required.</div>
+<div class="valid-feedback" id="last-name-valid">Looks good!</div>
+</div>
+            <div class="col-12">
+<label class="form-label" for="registration-email">Email address <span aria-hidden="true">*</span></label><input class="form-control" id="registration-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required maxlength="254" data-label="Email" aria-describedby="email-help registration-email-invalid registration-email-valid"><div class="form-text" id="email-help">Use an email address in the format you@example.com.</div>
+<div class="invalid-feedback" id="registration-email-invalid">Email is required.</div>
+<div class="valid-feedback" id="registration-email-valid">Email format looks good!</div>
+</div>
+            <div class="col-md-6">
+<label class="form-label" for="password">Password <span aria-hidden="true">*</span></label><input class="form-control" id="password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" required minlength="8" maxlength="72" data-label="Password" aria-describedby="password-help password-invalid password-valid"><div class="invalid-feedback" id="password-invalid">Use at least 8 characters.</div>
+<div class="valid-feedback" id="password-valid">Password length looks good!</div>
+<div class="form-text" id="password-help">8–72 characters. Use a unique password.</div>
+</div>
+            <div class="col-md-6">
+<label class="form-label" for="confirm-password">Confirm password <span aria-hidden="true">*</span></label><input class="form-control" id="confirm-password" name="confirmPassword" type="password" placeholder="Re-enter your password" autocomplete="new-password" required minlength="8" maxlength="72" data-label="Confirm password" aria-describedby="confirm-password-invalid confirm-password-valid"><div class="invalid-feedback" id="confirm-password-invalid">Passwords must match.</div>
+<div class="valid-feedback" id="confirm-password-valid">Passwords match!</div>
+</div>
+            <fieldset class="col-12 choice-group" data-required-group="gender">
+<legend>Gender <span aria-hidden="true">*</span>
+</legend>
+<div class="choices">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="gender-female" value="female" required aria-describedby="gender-invalid"><label class="form-check-label" for="gender-female">Female</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="gender-male" value="male" required aria-describedby="gender-invalid"><label class="form-check-label" for="gender-male">Male</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="gender-other" value="other" required aria-describedby="gender-invalid"><label class="form-check-label" for="gender-other">Other</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="gender" id="gender-private" value="prefer-not-to-say" required aria-describedby="gender-invalid"><label class="form-check-label" for="gender-private">Prefer not to say</label>
+</div>
+</div>
+<div class="invalid-feedback" id="gender-invalid" hidden>Please select an option.</div>
+</fieldset>
+            <fieldset class="col-12 choice-group">
+<legend>Hobbies <span class="optional">Optional</span>
+</legend>
+<div class="choices hobby-choices">
+<div class="form-check">
+<input class="form-check-input" id="hobby-reading" type="checkbox" name="hobbies" value="reading"><label class="form-check-label" for="hobby-reading">Reading</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" id="hobby-music" type="checkbox" name="hobbies" value="music"><label class="form-check-label" for="hobby-music">Music</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" id="hobby-sports" type="checkbox" name="hobbies" value="sports"><label class="form-check-label" for="hobby-sports">Sports</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" id="hobby-coding" type="checkbox" name="hobbies" value="coding"><label class="form-check-label" for="hobby-coding">Coding</label>
+</div>
+</div>
+</fieldset>
+            <div class="col-12">
+<label class="form-label" for="country">Country <span aria-hidden="true">*</span></label><select class="form-select" id="country" name="country" autocomplete="country-name" required data-label="Country" aria-describedby="country-invalid country-valid"><option value="" selected disabled>Select your country</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="UZ">Uzbekistan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TM">Turkmenistan</option>
+<option value="TR">Türkiye</option>
+<option value="GB">United Kingdom</option>
+<option value="US">United States</option>
+<option value="other">Other</option></select><div class="invalid-feedback" id="country-invalid">Please select a country.</div>
+<div class="valid-feedback" id="country-valid">Looks good!</div>
+</div>
+            <div class="col-12 form-actions">
+<button class="btn btn-primary" type="submit">Register</button><button class="btn btn-outline-secondary" type="reset">Reset form</button>
+</div>
+            <div class="col-12">
+<div class="form-status" role="status" aria-live="polite" hidden></div>
+<noscript><p>Enable JavaScript to use inline validation and password confirmation.</p></noscript>
+</div>
+          </form>
+      </section>
+      </main>
+    </div>
+</body>
+</html>
