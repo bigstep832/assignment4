@@ -1,0 +1,202 @@
+/* Bootstrap provides the form controls, validation states and responsive grid. */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+  background: #fff;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+}
+
+.page-container {
+  max-width: 780px;
+  padding: 30px 20px;
+}
+
+.site-header {
+  margin-bottom: 26px;
+}
+
+.task-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.task-nav a {
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 14px;
+  text-decoration: none;
+}
+
+.task-nav a:hover {
+  background: #f2f2f2;
+}
+
+.task-nav a.active {
+  color: #fff;
+  background: #0d6efd;
+  border-color: #0d6efd;
+}
+
+main h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 22px;
+}
+
+.required-note {
+  color: #555;
+  margin: -10px 0 22px;
+}
+
+.form-label, .basic-form label {
+  font-weight: 600;
+}
+
+.form-control, .form-select, .btn {
+  font-size: 16px;
+}
+
+.form-control, .form-select {
+  min-height: 42px;
+}
+
+textarea.form-control {
+  min-height: 130px;
+}
+
+.form-text, .field-help, .valid-feedback, .invalid-feedback {
+  font-size: 14px;
+}
+
+.field-help {
+  color: #555;
+  margin-top: 4px;
+}
+
+.choice-group {
+  margin-top: 20px;
+}
+
+.choice-group legend {
+  float: none;
+  width: auto;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.form-check {
+  margin-bottom: 0;
+}
+
+.optional {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.form-status {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.form-status[data-kind="success"] {
+  color: #146c43;
+  background: #eaf6ee;
+  border-color: #a3cfbb;
+}
+
+.form-status[data-kind="error"] {
+  color: #b02a37;
+  background: #fff0f1;
+  border-color: #f1aeb5;
+}
+
+.basic-form .field-group {
+  margin-bottom: 18px;
+}
+
+.basic-form label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.basic-form input, .basic-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  font-size: 16px;
+}
+
+.basic-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.skip-link {
+  position: absolute;
+  top: -80px;
+  left: 12px;
+  background: #fff;
+  padding: 10px 14px;
+  border: 2px solid #0d6efd;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #0d6efd;
+  outline-offset: 3px;
+}
+
+@media (max-width: 575px) {
+  .page-container {
+    padding: 20px 15px;
+  }
+
+  main h1 {
+    font-size: 22px;
+  }
+
+  .task-nav a {
+    padding: 6px 12px;
+  }
+
+  .choices {
+    gap: 8px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+  }
+}
