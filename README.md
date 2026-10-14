@@ -2,23 +2,8 @@
 
 **Student:** Zhadiger Saken  
 **Group:** SE-2538  
-**Course:** Front-End Development
 
 This project demonstrates a progression from a basic HTML contact form to a responsive registration form. It uses HTML5 controls and constraints, Bootstrap 5.3.3 form classes and grid columns, a simple Arial layout, and plain JavaScript for inline validation. Each page has top task navigation, one task heading, and its form. The pages use a 16px base font size and standard Bootstrap controls. Student attribution and group information appear in this report; form examples use Zhadiger Saken.
-
-## Run the project
-
-No package installation or build step is needed. Extract the complete project folder, then open **[`dist/index.html`](dist/index.html)** in a current browser. This is the main page and contains Task 4. Start at [`dist/task0.html`](dist/task0.html) to follow the tasks in order.
-
-Alternatively, if Python is installed, open a terminal in the project root and run:
-
-```sh
-python -m http.server 8000 --directory dist
-```
-
-Then open [http://localhost:8000](http://localhost:8000). Stop the server with `Ctrl+C`.
-
-An internet connection is required to load Bootstrap CSS from [jsDelivr's Bootstrap 5.3.3 CDN](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css), including when opening the pages locally. The stylesheet URL is pinned to version 5.3.3, and its Subresource Integrity (SRI) hash matches that exact version so the browser can check the downloaded file. Bootstrap is not bundled in this project. JavaScript must be enabled for custom validation, password confirmation, and the demonstration success messages.
 
 ## Project structure
 
@@ -133,55 +118,3 @@ These examples can be repeated during the defense. Use test data rather than a r
 | Task 4 valid state | Use the sample values below and submit | A valid-registration message appears; no account is created. |
 | Task 4 reset | After errors or a successful attempt, click Reset form | Values, feedback, and status return to the initial state. |
 | Keyboard and mobile | Navigate with Tab and resize the page | Controls remain reachable and the layout fits the available width. |
-
-Sample valid registration:
-
-```text
-First name:       Zhadiger
-Last name:        Saken
-Email:            zhadiger@example.com
-Password:         Demo2538!
-Confirm password: Demo2538!
-Gender:           Any listed option
-Hobbies:          Optional; for example Reading and Coding
-Country:          Kazakhstan
-```
-
-`Demo2538!` is a demonstration value only. Email validation checks syntax, not whether the address exists. A valid password here means it passes the length and matching rules; this form does not assess account security.
-
-## Defense study notes
-
-- **Labels and names:** `id` connects a control to its label. `name` identifies a form value if it is submitted. A placeholder is an example, not a replacement for a label.
-- **HTML5 constraints:** `required` rejects an empty required control; `type="email"` checks email syntax; `minlength` and `maxlength` define text length limits. The browser exposes results through each control's `validity` object.
-- **Native and inline feedback:** Tasks 1 and 2 let the browser show native messages. Tasks 3 and 4 use `novalidate` to suppress those tooltips, then JavaScript calls `checkValidity()` and displays Bootstrap feedback. `novalidate` does not remove the constraint attributes.
-- **Bootstrap classes:** `row`, `g-3`, and `col-md-6` arrange the form. `form-control`, `form-select`, and `form-check` style controls. `is-valid` and `is-invalid` choose states; the feedback elements provide explanations.
-- **Password matching:** A nonempty confirmation that differs from the password receives a custom error. `setCustomValidity('')` clears the previous error before checking again so a corrected field can become valid.
-- **Radio buttons and checkboxes:** Radios sharing `name="gender"` allow one selection. Checkboxes allow independent selections, so more than one hobby can be chosen. A `fieldset` and `legend` describe each group.
-- **Submission and reset:** `preventDefault()` keeps the demo on the current page. `type="reset"` restores initial field values; the reset handler also clears the custom feedback state.
-- **Practice changes:** Be ready to change the password minimum, add a new country or hobby, add a required phone field, or explain a Bootstrap grid class. Change the HTML constraint and its helper text together.
-
-The assignment requires a defense at the practice lesson, including technical questions and live coding. Review the provided course resources and be able to explain and modify this implementation.
-
-## Scope and limitations
-
-This is a front-end demonstration. With JavaScript enabled, submissions are intercepted: form values are not transmitted to a server, written to browser storage, or used to create an account. Values exist only in the current page; normal browser autofill behavior is controlled by the browser. There is no database, email delivery, login, password hashing, or real authentication. A production service would also need server-side validation and an appropriate account system.
-
-## Submit through GitHub
-
-**Public repository:** [bigstep832/assignment4](https://github.com/bigstep832/assignment4)
-
-1. Open the repository without signing in and confirm that this README renders, all ten screenshots are visible, and `dist/` contains the HTML, CSS, and JavaScript files. Check the pages with an internet connection so the Bootstrap CDN stylesheet can load.
-2. Submit [this repository URL](https://github.com/bigstep832/assignment4) as the project URL in Moodle before the deadline shown there.
-3. Attend the mandatory practice-lesson defense and prepare for the walkthrough and live coding.
-
-GitHub Pages hosting is optional. The required submission is the public repository containing the complete project and this README. The website can be run locally from `dist/index.html` without deployment.
-
-## References and third-party license
-
-- [MDN: Your first form](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Your_first_form) — form controls and connected labels.
-- [MDN: Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) — HTML5 constraints and JavaScript validation.
-- [Bootstrap 5.3: Forms overview](https://getbootstrap.com/docs/5.3/forms/overview/) — form classes and controls.
-- [Bootstrap 5.3: Validation](https://getbootstrap.com/docs/5.3/forms/validation/) — valid/invalid states and feedback elements.
-- Course resource: Abitova G. A., *Web Technologies Front-End Development. Part 1* (2022).
-
-Bootstrap 5.3.3 CSS is loaded from jsDelivr with a pinned version and matching SRI hash. Bootstrap is distributed under the MIT License; see the upstream [Bootstrap 5.3.3 copyright and license notice](https://github.com/twbs/bootstrap/blob/v5.3.3/LICENSE).
