@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 0: Basic Contact Form | Assignment 4</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/app.js" defer></script>
+</head>
+<body data-task="0">
+  <a class="skip-link" href="#main">Skip to form</a>
+  <div class="container page-container">
+    <header class="site-header">
+      <nav class="task-nav" aria-label="Assignment tasks">
+        <a class="active" aria-current="page" href="task0.html">Task 0</a>
+        <a href="task1.html">Task 1</a>
+        <a href="task2.html">Task 2</a>
+        <a href="task3.html">Task 3</a>
+        <a href="index.html">Task 4</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1 id="task-title">Task 0: Basic Contact Form</h1>
+      <section class="form-section" aria-labelledby="task-title">
+        <form id="contact-form" class="basic-form" data-mode="basic" data-success="Form completed successfully.">
+          <div class="field-group">
+            <label for="task0-name">Full name</label>
+            <input id="task0-name" name="name" type="text" autocomplete="name">
+          </div>
+          <div class="field-group">
+            <label for="task0-email">Email address</label>
+            <input id="task0-email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="field-group">
+            <label for="task0-message">Message</label>
+            <textarea id="task0-message" name="message" rows="5"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </div>
+          <div class="form-status" role="status" aria-live="polite" hidden></div>
+        </form>
+      </section>
+
+      </main>
+
+    </div>
+</body>
+</html>
